@@ -21,20 +21,20 @@ import styled from 'styled-components';
 /////////////////////
 export const CustomBtn = styled.button`
   display: inline-block;
-  background-color: white;
-  color: #444;
+  background-color: #4f70b5;
+  color: #f3f1f1;
   width: 150px;
-  /* margin-left: 10px; */
+  margin-left: 10px;
   padding-right: 25px;
-  text-align: center;
+
   border-radius: 5px;
   border: thin solid #888;
   box-shadow: 1px 1px 1px grey;
   white-space: nowrap;
-
   :hover {
     cursor: pointer;
     opacity: 0.75;
+    border: 1px solid white;
   }
 `;
 
@@ -46,7 +46,7 @@ export const SpanLabel = styled.label`
 export const SpanIcon = styled.span`
   display: inline-block;
   vertical-align: middle;
-  width: 62px;
+  width: 65px;
   height: 32px;
 `;
 
@@ -55,8 +55,8 @@ export const ButtonText = styled.text`
   vertical-align: middle;
   padding-left: 62px;
   padding-right: 42px;
-  font-size: 14px; */
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: bold; */
 
   font-family: 'Roboto', sans-serif;
 `;
