@@ -1,6 +1,6 @@
 import React from 'react';
 //
-import ReactDOM from 'react-dom';
+
 import {
   CardWrapper,
   CardHeader,
@@ -15,7 +15,7 @@ import {
   CardButton,
   CardLink,
 } from './Card';
-import './styles.css';
+
 //
 
 const FormReg = () => {
