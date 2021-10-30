@@ -8,8 +8,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
-// const images = 'https://mdbootstrap.com/img/new/standard/nature/111.jpg';
-
 const Card = () => {
   // Hooks
   // -- state
@@ -49,12 +47,12 @@ const Card = () => {
       setSubmit({ ...submit, ...object });
     }
 
-    if (!input.value.length) input.style.border = '1px solid black';
+    if (!input.value.length) input.style.border = '1px solid red';
   };
   // -- inputs validationas
   const handleUsernameOnChange = () => {
     const input = usernameInputRef.current;
-    const rule = input.value.charAt(0) === input.value.charAt(0).toUpperCase();
+    const rule = input.value.length !== 0;
     validationHelper(input, rule, 'username');
 
     setUsername(input.value);
@@ -62,7 +60,7 @@ const Card = () => {
 
   const handleEmailOnChange = () => {
     const input = emailInputRef.current;
-    const rule = input.value.includes('@');
+    const rule = input.value.length !== 0;
     validationHelper(input, rule, 'email');
 
     setEmail(input.value);
@@ -77,24 +75,26 @@ const Card = () => {
   };
 
   return (
-    <div class='card' style={{ display: 'flex', flexDirection: 'row' }}>
+    <div
+      className='card'
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        backgroundColor: '',
+        width: '830px',
+        border: '1px solid #F2877D',
+      }}
+    >
       <img
         src='https://raw.githubusercontent.com/JoyShaheb/Project-image-repo/e2aa9d5d409b28efe7040e4b92da891c64ee23ce/Form-Validation/images/illustration.svg'
         alt=''
-        style={{ width: '400px' }}
+        style={{ width: '400px', padding: '55px', backgroundColor: '#F2877D' }}
       />
-      <div class='bg-image ' data-mdb-ripple-color='light'>
-        <a href='#!'>
-          <div
-            class='mask'
-            style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}
-          ></div>
-        </a>
-      </div>
-      <div class='card-body'>
+      <div className='bg-image ' data-mdb-ripple-color='light'></div>
+      <div className='card-body'>
         <b>
           {' '}
-          <h1 class='card-title' style={{ paddingTop: '25px' }}>
+          <h1 className='card-title' style={{ paddingTop: '25px' }}>
             Get Started
           </h1>
         </b>
@@ -124,6 +124,7 @@ const Card = () => {
             ref={usernameInputRef}
             value={username}
             onChange={handleUsernameOnChange}
+            placeholder='Joy Shameb'
           />
         </div>
         <div>
@@ -135,6 +136,7 @@ const Card = () => {
             ref={emailInputRef}
             value={email}
             onChange={handleEmailOnChange}
+            placeholder='abc@gmail.com'
           />
         </div>
         <div>
@@ -146,6 +148,7 @@ const Card = () => {
             ref={passwordInputRef}
             value={password}
             onChange={handlePasswordOnChange}
+            placeholder='*******'
           />
         </div>
         <div>
