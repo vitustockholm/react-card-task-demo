@@ -1,14 +1,14 @@
 import './App.css';
-import Form from './components/Form/Form';
+// import Form from './components/Form/Form';
 // import Card2 from './components/Card/Card2';
 import Card from './components/Card2/Card';
 
 function App() {
   return (
     <div>
-      <Form />
+      {/* <Form /> */}
       {/* <Card2 /> */}
-      {/* <Card /> */}
+      <Card />
     </div>
   );
 }

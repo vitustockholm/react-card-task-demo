@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, { forwardRef } from 'react';
 
 // Styles
-import { CustomBtn } from './ButtonSocial.style';
-import { SpanIcon } from './ButtonSocial.style';
-import { FcGoogle } from 'react-icons/fc';
+import { CustomBtn } from './ButtonSocial2.style';
+import { SpanIcon } from './ButtonSocial2.style';
+import { FaFacebook } from 'react-icons/fa';
 
 const Button = forwardRef(({ text, action, primary, secondary }, ref) => {
   return (
@@ -15,8 +15,9 @@ const Button = forwardRef(({ text, action, primary, secondary }, ref) => {
         secondary={secondary}
         ref={ref}
       >
+        {' '}
         <SpanIcon>
-          <FcGoogle />
+          <FaFacebook />
         </SpanIcon>
         {text}
       </CustomBtn>
