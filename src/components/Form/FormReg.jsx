@@ -14,7 +14,7 @@ import {
   CardOptionsNote,
   CardButton,
   CardLink,
-} from './Card';
+} from '../Card2/Card';
 
 //
 
