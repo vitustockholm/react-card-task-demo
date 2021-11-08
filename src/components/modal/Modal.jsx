@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
-// Styles
-import { ModalWrapper, Overlay, StyledModal } from './Modal.style';
+//styles
+import { Overlay, ModalWrapper, StyledModal } from './Modal.style';
 
 const Modal = ({ children, onClose }) => {
-  // Hooks
-  // -- side effects
+  //--side effects
   useEffect(() => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -15,14 +15,17 @@ const Modal = ({ children, onClose }) => {
     });
   }, [onClose]);
 
-  // Custom funtions
+  //custom functions
   const closeOnOverlay = (e) => {
+    e.stopPropagation();
     if (e.target.dataset.id === 'modalWrapper') onClose();
     return;
   };
 
   return ReactDOM.createPortal(
     <>
+      <div></div>
+      <div></div>
       <Overlay></Overlay>
       <ModalWrapper onClick={(e) => closeOnOverlay(e)} data-id='modalWrapper'>
         <StyledModal>
@@ -30,8 +33,14 @@ const Modal = ({ children, onClose }) => {
         </StyledModal>
       </ModalWrapper>
     </>,
-    document.getElementById('portal')
+    document.getElementById('modal')
   );
+};
+
+//Proptypes require
+Modal.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default Modal;
