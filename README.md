@@ -3,6 +3,10 @@
 # npm install
 
 # npm start
+  
+  REPEATED DESIGN from image to HTML 
+  VALIDATION
+  MODAL WINDOW
 
 - after submiting form => Submit button opacity dissapears
 
@@ -10,7 +14,7 @@
 
 - reusable REACT components
 
-* must come back and make this code dry.
+* make it dry please Vytautas :) 
 * put logo -not enought time - take out modal window on main screen
 * put icons in inputs
 
