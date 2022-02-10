@@ -1,6 +1,6 @@
 deployed project :  https://react-card-task-demo.vercel.app/
 
-Pixel perfect task + form validation
+Pixel perfect  + form validation + modal window
 
 # git clone <this repository>
 
