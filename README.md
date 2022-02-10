@@ -1,3 +1,7 @@
+deployed project :  https://react-card-task-demo.vercel.app/
+
+Pixel perfect task + form validation
+
 # git clone <this repository>
 
 # npm install
@@ -13,9 +17,7 @@
 - if inputs empty => Submit button doesnt work
 
 - reusable REACT components
-
-* make it dry please Vytautas :) 
-* put logo -not enought time - take out modal window on main screen
+  
+* put logo take out modal window on main screen
 * put icons in inputs
 
-Task made by Vytautas B
